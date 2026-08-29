@@ -1,0 +1,14 @@
+# Prevent any script execution inside the uploads folder.
+# Even if a malicious file bypasses upload validation and lands here,
+# the web server will refuse to execute it as PHP.
+<FilesMatch "\.(php|phtml|php3|php4|php5|php7|pht|phar)$">
+    Require all denied
+</FilesMatch>
+
+# Apache 2.2 fallback
+<IfModule !mod_authz_core.c>
+    <FilesMatch "\.(php|phtml|php3|php4|php5|php7|pht|phar)$">
+        Order allow,deny
+        Deny from all
+    </FilesMatch>
+</IfModule>
