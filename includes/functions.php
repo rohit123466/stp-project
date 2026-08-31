@@ -106,6 +106,26 @@ function service_image_url($filename, $title = '') {
 }
 
 /**
+ * Build the image URL for a portfolio card. Falls back to the generic
+ * placeholder, except for specific known projects that get their own
+ * branded illustration instead (matched by title).
+ */
+function portfolio_image_url($filename, $title = '') {
+    if (!empty($filename) && file_exists(UPLOAD_DIR . $filename)) {
+        return UPLOAD_URL . $filename;
+    }
+
+    if (str_contains(strtolower($title), 'moviefy')) {
+        return BASE_URL . '/assets/img/portfolio-moviefy.svg';
+    }
+    if (str_contains(strtolower($title), 'ipl') || str_contains(strtolower($title), 'auction')) {
+        return BASE_URL . '/assets/img/portfolio-iplauction.svg';
+    }
+
+    return BASE_URL . '/assets/img/placeholder.svg';
+}
+
+/**
  * Build the hero banner image URL for a single service's detail page.
  * Falls back to an illustration of people doing that work (instead of the
  * plain icon used on the listing cards) when no image has been uploaded.

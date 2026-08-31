@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="400" viewBox="0 0 600 400">
+  <rect width="600" height="400" fill="#e6f4ea"/>
+  <rect x="215" y="214" width="94" height="15" rx="5" fill="#8a5a12"/>
+  <g transform="rotate(-25 260 172)">
+    <rect x="228" y="152" width="72" height="36" rx="9" fill="#a5701c"/>
+    <rect x="292" y="163" width="92" height="15" rx="6" fill="#a5701c"/>
+  </g>
+  <circle cx="382" cy="150" r="32" fill="#b3282d"/>
+  <path d="M358 128 Q382 150 358 172" stroke="#f5e9c8" stroke-width="3" fill="none"/>
+  <path d="M406 128 Q382 150 406 172" stroke="#f5e9c8" stroke-width="3" fill="none"/>
+  <text x="300" y="290" font-family="Arial, sans-serif" font-size="24" fill="#2e5b3e" text-anchor="middle">IPL Auction Game</text>
+</svg>

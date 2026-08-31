@@ -55,13 +55,13 @@ CREATE TABLE portfolio (
     description TEXT NOT NULL,
     image VARCHAR(255) DEFAULT NULL,
     client_name VARCHAR(150) NOT NULL,
+    project_url VARCHAR(255) DEFAULT NULL,
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 
-INSERT INTO portfolio (title, description, image, client_name) VALUES
-('E-commerce Rebrand', 'Complete rebrand and Shopify storefront redesign that increased conversion rate by 32%.', NULL, 'Urban Threads Clothing'),
-('Local SEO Campaign', 'Ranked client in the top 3 Google Map Pack results for 15 local search terms within 4 months.', NULL, 'GreenLeaf Cafe'),
-('Lead Generation Funnel', 'Built a landing page + PPC funnel that reduced cost-per-lead by 40%.', NULL, 'Apex Fitness Studio');
+INSERT INTO portfolio (title, description, image, client_name, project_url) VALUES
+('Moviefy - AI-Powered Movie Discovery', 'A movie discovery and streaming-guide platform built to help users find what to watch. Browse trending and top-rated titles, search with advanced filters, explore films by director, and describe a mood to get AI-suggested picks. Moviefy sources listings from third-party platforms rather than hosting media itself.', NULL, 'Personal Project', 'https://moviefy-dusky.vercel.app/'),
+('IPL Auction Game', 'An interactive cricket player-auction web app inspired by the IPL Super Auction, where users can experience the bidding and team-building side of a franchise cricket auction in the browser.', NULL, 'Personal Project', 'https://iplauctiongame.vercel.app/');
 
 -- ------------------------------------------------------------
 -- Table: testimonials

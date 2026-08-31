@@ -16,29 +16,32 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && ($_POST['action'] ?? '') === 'save'
     $title = trim($_POST['title'] ?? '');
     $description = trim($_POST['description'] ?? '');
     $clientName = trim($_POST['client_name'] ?? '');
+    $projectUrl = trim($_POST['project_url'] ?? '');
 
     if ($title === '') $errors[] = 'Title is required.';
     if ($description === '') $errors[] = 'Description is required.';
     if ($clientName === '') $errors[] = 'Client name is required.';
+    if ($projectUrl !== '' && filter_var($projectUrl, FILTER_VALIDATE_URL) === false) $errors[] = 'Project URL must be a valid URL.';
 
     $upload = handle_image_upload('image');
     if (!$upload['ok']) $errors[] = $upload['error'];
 
     if (empty($errors)) {
+        $projectUrlValue = $projectUrl !== '' ? $projectUrl : null;
         if ($id > 0) {
             if ($upload['filename']) {
-                $stmt = mysqli_prepare($conn, "UPDATE portfolio SET title=?, description=?, image=?, client_name=? WHERE id=?");
-                mysqli_stmt_bind_param($stmt, 'ssssi', $title, $description, $upload['filename'], $clientName, $id);
+                $stmt = mysqli_prepare($conn, "UPDATE portfolio SET title=?, description=?, image=?, client_name=?, project_url=? WHERE id=?");
+                mysqli_stmt_bind_param($stmt, 'sssssi', $title, $description, $upload['filename'], $clientName, $projectUrlValue, $id);
             } else {
-                $stmt = mysqli_prepare($conn, "UPDATE portfolio SET title=?, description=?, client_name=? WHERE id=?");
-                mysqli_stmt_bind_param($stmt, 'sssi', $title, $description, $clientName, $id);
+                $stmt = mysqli_prepare($conn, "UPDATE portfolio SET title=?, description=?, client_name=?, project_url=? WHERE id=?");
+                mysqli_stmt_bind_param($stmt, 'ssssi', $title, $description, $clientName, $projectUrlValue, $id);
             }
             mysqli_stmt_execute($stmt);
             mysqli_stmt_close($stmt);
             $message = 'Portfolio item updated successfully.';
         } else {
-            $stmt = mysqli_prepare($conn, "INSERT INTO portfolio (title, description, image, client_name) VALUES (?, ?, ?, ?)");
-            mysqli_stmt_bind_param($stmt, 'ssss', $title, $description, $upload['filename'], $clientName);
+            $stmt = mysqli_prepare($conn, "INSERT INTO portfolio (title, description, image, client_name, project_url) VALUES (?, ?, ?, ?, ?)");
+            mysqli_stmt_bind_param($stmt, 'sssss', $title, $description, $upload['filename'], $clientName, $projectUrlValue);
             mysqli_stmt_execute($stmt);
             mysqli_stmt_close($stmt);
             $message = 'Portfolio item added successfully.';
@@ -94,6 +97,10 @@ require_once __DIR__ . '/../includes/admin_header.php';
         <input type="text" name="client_name" class="form-control" required value="<?= htmlspecialchars($editRow['client_name'] ?? '') ?>">
       </div>
       <div class="col-md-6">
+        <label class="form-label">Project URL <span class="text-muted small">(optional)</span></label>
+        <input type="url" name="project_url" class="form-control" placeholder="https://example.com" value="<?= htmlspecialchars($editRow['project_url'] ?? '') ?>">
+      </div>
+      <div class="col-md-6">
         <label class="form-label">Image <span class="text-muted small">(JPG/PNG/WEBP, max 2MB)</span></label>
         <input type="file" name="image" class="form-control" accept=".jpg,.jpeg,.png,.webp" data-preview="#previewImg">
         <img id="previewImg" src="<?= image_url($editRow['image'] ?? null) ?>" class="mt-2 rounded" style="max-height:100px;">
@@ -122,7 +129,7 @@ require_once __DIR__ . '/../includes/admin_header.php';
           <tr>
             <td><img src="<?= image_url($item['image']) ?>" style="width:60px;height:45px;object-fit:cover;" class="rounded"></td>
             <td><?= htmlspecialchars($item['title']) ?></td>
-            <td><?= htmlspecialchars($item['client_name']) ?></td>
+            <td><?= htmlspecialchars($item['client_name']) ?><?php if (!empty($item['project_url'])): ?><br><a href="<?= htmlspecialchars($item['project_url']) ?>" target="_blank" rel="noopener noreferrer" class="small">visit &rarr;</a><?php endif; ?></td>
             <td class="small text-muted"><?= htmlspecialchars($item['created_at']) ?></td>
             <td class="text-nowrap">
               <a href="manage_portfolio.php?edit=<?= $item['id'] ?>" class="btn btn-sm btn-outline-primary">Edit</a>

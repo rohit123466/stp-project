@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="400" viewBox="0 0 600 400">
+  <rect width="600" height="400" fill="#ede7f6"/>
+  <circle cx="300" cy="168" r="72" fill="none" stroke="#4527a0" stroke-width="14"/>
+  <circle cx="300" cy="168" r="11" fill="#4527a0"/>
+  <circle cx="342" cy="168" r="13" fill="#4527a0"/>
+  <circle cx="321" cy="204" r="13" fill="#4527a0"/>
+  <circle cx="279" cy="204" r="13" fill="#4527a0"/>
+  <circle cx="258" cy="168" r="13" fill="#4527a0"/>
+  <circle cx="279" cy="132" r="13" fill="#4527a0"/>
+  <circle cx="321" cy="132" r="13" fill="#4527a0"/>
+  <path d="M290 152 L290 184 L318 168 Z" fill="#ede7f6"/>
+  <text x="300" y="290" font-family="Arial, sans-serif" font-size="26" fill="#4527a0" text-anchor="middle">Moviefy</text>
+</svg>
