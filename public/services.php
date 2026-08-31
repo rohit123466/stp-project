@@ -27,13 +27,15 @@ while ($row = mysqli_fetch_assoc($result)) {
     <div class="row g-4">
       <?php foreach ($services as $service): ?>
         <div class="col-md-6 col-lg-4">
-          <div class="card card-service">
-            <img src="<?= image_url($service['image']) ?>" class="card-img-top" alt="<?= clean_input($service['title']) ?>">
-            <div class="card-body">
-              <h5 class="card-title"><?= clean_input($service['title']) ?></h5>
-              <p class="card-text text-muted"><?= clean_input($service['description']) ?></p>
+          <a href="service_detail.php?id=<?= (int)$service['id'] ?>" class="text-decoration-none text-reset">
+            <div class="card card-service h-100">
+              <img src="<?= service_image_url($service['image'], $service['title']) ?>" class="card-img-top" alt="<?= clean_input($service['title']) ?>">
+              <div class="card-body">
+                <h5 class="card-title"><?= clean_input($service['title']) ?></h5>
+                <p class="card-text text-muted"><?= clean_input($service['description']) ?></p>
+              </div>
             </div>
-          </div>
+          </a>
         </div>
       <?php endforeach; ?>
       <?php if (empty($services)): ?>

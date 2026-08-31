@@ -79,6 +79,60 @@ function image_url($filename) {
 }
 
 /**
+ * Build the image URL for a service card. Falls back to a branded,
+ * icon-specific placeholder matched by keywords in the service title
+ * (instead of the generic placeholder) when no image has been uploaded.
+ */
+function service_image_url($filename, $title = '') {
+    if (!empty($filename) && file_exists(UPLOAD_DIR . $filename)) {
+        return UPLOAD_URL . $filename;
+    }
+
+    $title = strtolower($title);
+    if (str_contains($title, 'seo') || str_contains($title, 'search engine')) {
+        return BASE_URL . '/assets/img/placeholder-seo.svg';
+    }
+    if (str_contains($title, 'social media') || str_contains($title, 'smm')) {
+        return BASE_URL . '/assets/img/placeholder-smm.svg';
+    }
+    if (str_contains($title, 'web design') || str_contains($title, 'web development') || str_contains($title, 'website')) {
+        return BASE_URL . '/assets/img/placeholder-webdev.svg';
+    }
+    if (str_contains($title, 'pay-per-click') || str_contains($title, 'ppc') || str_contains($title, 'advertising')) {
+        return BASE_URL . '/assets/img/placeholder-ppc.svg';
+    }
+
+    return BASE_URL . '/assets/img/placeholder.svg';
+}
+
+/**
+ * Build the hero banner image URL for a single service's detail page.
+ * Falls back to an illustration of people doing that work (instead of the
+ * plain icon used on the listing cards) when no image has been uploaded.
+ */
+function service_hero_image_url($filename, $title = '') {
+    if (!empty($filename) && file_exists(UPLOAD_DIR . $filename)) {
+        return UPLOAD_URL . $filename;
+    }
+
+    $title = strtolower($title);
+    if (str_contains($title, 'seo') || str_contains($title, 'search engine')) {
+        return BASE_URL . '/assets/img/service-hero-seo.svg';
+    }
+    if (str_contains($title, 'social media') || str_contains($title, 'smm')) {
+        return BASE_URL . '/assets/img/service-hero-smm.svg';
+    }
+    if (str_contains($title, 'web design') || str_contains($title, 'web development') || str_contains($title, 'website')) {
+        return BASE_URL . '/assets/img/service-hero-webdev.svg';
+    }
+    if (str_contains($title, 'pay-per-click') || str_contains($title, 'ppc') || str_contains($title, 'advertising')) {
+        return BASE_URL . '/assets/img/service-hero-ppc.svg';
+    }
+
+    return BASE_URL . '/assets/img/placeholder.svg';
+}
+
+/**
  * Bootstrap badge color class for a lead status, used in admin tables.
  */
 function status_badge_class($status) {

@@ -1,0 +1,10 @@
+Read c:\Users\ROHIT JAIN\Desktop\stp project\README.md
+Your STP project is a website + simple content management system for a fictional digital marketing agency called OpportuneX Digital. It's your college summer training project.
+
+In plain terms, it has two halves:
+
+Public website — homepage, about, services, portfolio, and a contact page. Content like services/portfolio/testimonials is pulled live from a MySQL database instead of being hardcoded, and the contact form saves visitor inquiries as "leads."
+
+Admin panel — a password-protected dashboard where you (the site owner) log in to add/edit/delete services, portfolio items, and testimonials, and to view/manage the leads that come in from the contact form.
+
+Tech-wise it's deliberately simple and framework-free: plain PHP + MySQL (using mysqli with prepared statements) + Bootstrap 5 + vanilla JS, meant to run on XAMPP — no Composer/frameworks, so it's easy to explain line-by-line in a viva. It also has basic security built in (password hashing, session-based login, safe file uploads, XSS/SQL-injection protection), which the README calls out explicitly for viva discussion.
