@@ -13,27 +13,29 @@
  */
 
 /**
- * Reject a small number of requests per visitor per hour so the tool can't
- * be used to hammer arbitrary third-party sites from this server.
+ * Reject a small number of requests per visitor per hour, per tool, so
+ * none of the URL-fetching tools can be used to hammer arbitrary
+ * third-party sites from this server. $key namespaces the counter so the
+ * SEO audit and the website health check track separate budgets.
  */
-function seo_audit_rate_limit_ok() {
+function url_fetch_rate_limit_ok($key, $limit = 20) {
     if (session_status() !== PHP_SESSION_ACTIVE) {
         session_start();
     }
     $now = time();
     $window = 3600;
-    $limit = 20;
+    $sessionKey = "url_fetch_hits_$key";
 
-    $hits = $_SESSION['seo_audit_hits'] ?? [];
+    $hits = $_SESSION[$sessionKey] ?? [];
     $hits = array_filter($hits, fn($t) => $t > $now - $window);
 
     if (count($hits) >= $limit) {
-        $_SESSION['seo_audit_hits'] = $hits;
+        $_SESSION[$sessionKey] = $hits;
         return false;
     }
 
     $hits[] = $now;
-    $_SESSION['seo_audit_hits'] = $hits;
+    $_SESSION[$sessionKey] = $hits;
     return true;
 }
 
