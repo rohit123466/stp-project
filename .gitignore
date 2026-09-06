@@ -1,0 +1,10 @@
+# Local config with real DB credentials — never commit this
+config/config.php
+
+# Uploaded user content
+uploads/*
+!uploads/.htaccess
+
+# OS / editor cruft
+.DS_Store
+Thumbs.db
