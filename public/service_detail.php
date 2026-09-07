@@ -20,7 +20,7 @@ if ($id) {
     mysqli_stmt_close($stmt);
 }
 
-$pageTitle = $service ? $service['meta_title'] : 'Service Not Found - Grovix Digital';
+$pageTitle = $service ? $service['meta_title'] : 'Service Not Found - GroviX Digital';
 $metaDescription = $service ? $service['meta_description'] : 'The requested service could not be found.';
 
 // The SEO service gets an instant, real audit tool right on its page

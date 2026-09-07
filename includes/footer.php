@@ -1,8 +1,8 @@
 <footer class="bg-dark text-light py-4 mt-5">
   <div class="container text-center">
-    <p class="mb-1 fw-bold">Grovix Digital</p>
+    <p class="mb-1 fw-bold">GroviX Digital</p>
     <p class="mb-1 small text-secondary">Helping businesses grow with smart, data-driven digital marketing.</p>
-    <p class="mb-0 small text-secondary">&copy; <?= date('Y') ?> Grovix Digital. All rights reserved.</p>
+    <p class="mb-0 small text-secondary">&copy; <?= date('Y') ?> GroviX Digital. All rights reserved.</p>
   </div>
 </footer>
 

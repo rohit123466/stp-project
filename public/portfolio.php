@@ -5,8 +5,8 @@
 require_once __DIR__ . '/../includes/db.php';
 require_once __DIR__ . '/../includes/functions.php';
 
-$pageTitle = 'Our Portfolio - Grovix Digital';
-$metaDescription = 'See the results Grovix Digital has delivered for clients across industries.';
+$pageTitle = 'Our Portfolio - GroviX Digital';
+$metaDescription = 'See the results GroviX Digital has delivered for clients across industries.';
 
 require_once __DIR__ . '/../includes/header.php';
 

@@ -5,19 +5,19 @@
 require_once __DIR__ . '/../includes/db.php';
 require_once __DIR__ . '/../includes/functions.php';
 
-$pageTitle = 'About Us - Grovix Digital';
-$metaDescription = 'Learn more about Grovix Digital, our team, and our mission to help businesses grow online.';
+$pageTitle = 'About Us - GroviX Digital';
+$metaDescription = 'Learn more about GroviX Digital, our team, and our mission to help businesses grow online.';
 
 require_once __DIR__ . '/../includes/header.php';
 ?>
 
 <section class="py-5">
   <div class="container">
-    <h1 class="fw-bold mb-4">About Grovix Digital</h1>
+    <h1 class="fw-bold mb-4">About GroviX Digital</h1>
     <div class="row align-items-center g-4">
       <div class="col-lg-6">
         <p>
-          Grovix Digital is a full-service digital marketing agency dedicated to helping
+          GroviX Digital is a full-service digital marketing agency dedicated to helping
           small and mid-sized businesses grow their online presence. Since our founding, we have
           worked with clients across retail, hospitality, fitness, and e-commerce to deliver
           measurable growth through SEO, social media, web design, and paid advertising.

@@ -5,8 +5,8 @@
 require_once __DIR__ . '/../includes/db.php';
 require_once __DIR__ . '/../includes/functions.php';
 
-$pageTitle = 'Our Services - Grovix Digital';
-$metaDescription = 'Explore the full range of digital marketing services offered by Grovix Digital: SEO, social media, web design, and PPC.';
+$pageTitle = 'Our Services - GroviX Digital';
+$metaDescription = 'Explore the full range of digital marketing services offered by GroviX Digital: SEO, social media, web design, and PPC.';
 
 require_once __DIR__ . '/../includes/header.php';
 

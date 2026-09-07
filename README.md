@@ -1,6 +1,6 @@
-# Grovix Digital - Client Website Builder / CMS
+# GroviX Digital - Client Website Builder / CMS
 
-A PHP + MySQL website + CMS built for **Grovix Digital**, a digital marketing
+A PHP + MySQL website + CMS built for **GroviX Digital**, a digital marketing
 agency. Public-facing marketing site with dynamic content, plus an admin panel
 to manage services, portfolio, testimonials, and incoming leads.
 

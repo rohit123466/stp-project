@@ -53,8 +53,8 @@ if (isset($_GET['sent']) && !empty($_SESSION['contact_success'])) {
     unset($_SESSION['contact_success']);
 }
 
-$pageTitle = 'Contact Us - Grovix Digital';
-$metaDescription = 'Get in touch with Grovix Digital for a free digital marketing consultation.';
+$pageTitle = 'Contact Us - GroviX Digital';
+$metaDescription = 'Get in touch with GroviX Digital for a free digital marketing consultation.';
 
 require_once __DIR__ . '/../includes/header.php';
 ?>

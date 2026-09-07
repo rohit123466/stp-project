@@ -114,7 +114,7 @@ function fetch_url_for_audit($validated) {
         CURLOPT_SSL_VERIFYPEER => true,
         CURLOPT_SSL_VERIFYHOST => 2,
         CURLOPT_CAINFO => __DIR__ . '/cacert.pem', // bundled so this works even if the server's php.ini has no CA path set
-        CURLOPT_USERAGENT => 'GrovixSEOAuditBot/1.0 (+instant site audit tool)',
+        CURLOPT_USERAGENT => 'GroviXSEOAuditBot/1.0 (+instant site audit tool)',
         CURLOPT_RANGE => '0-2097151', // cap at ~2MB of response body
     ]);
 
