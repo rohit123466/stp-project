@@ -6,8 +6,8 @@
 require_once __DIR__ . '/../includes/db.php';
 require_once __DIR__ . '/../includes/functions.php';
 
-$pageTitle = 'OpportuneX Digital - Grow Your Business Online';
-$metaDescription = 'OpportuneX Digital is a full-service digital marketing agency offering SEO, social media, web design, and PPC services.';
+$pageTitle = 'Grovix Digital - Grow Your Business Online';
+$metaDescription = 'Grovix Digital is a full-service digital marketing agency offering SEO, social media, web design, and PPC services.';
 
 require_once __DIR__ . '/../includes/header.php';
 
@@ -30,7 +30,7 @@ while ($row = mysqli_fetch_assoc($result)) {
   <div class="container">
     <h1 class="display-5 fw-bold">Digital Marketing That Actually Grows Your Business</h1>
     <p class="lead col-lg-8 mx-auto mt-3">
-      OpportuneX Digital combines SEO, social media, web design, and paid advertising
+      Grovix Digital combines SEO, social media, web design, and paid advertising
       into one results-driven strategy built around your goals.
     </p>
     <a href="contact.php" class="btn btn-warning btn-lg mt-3">Get a Free Consultation</a>

@@ -1,6 +1,6 @@
-# OpportuneX Digital - Client Website Builder / CMS
+# Grovix Digital - Client Website Builder / CMS
 
-A PHP + MySQL website + CMS built for **OpportuneX Digital**, a digital marketing
+A PHP + MySQL website + CMS built for **Grovix Digital**, a digital marketing
 agency. Public-facing marketing site with dynamic content, plus an admin panel
 to manage services, portfolio, testimonials, and incoming leads.
 
@@ -62,7 +62,7 @@ stp project/
 
 1. **Copy the project into `htdocs`**
    Copy this whole folder into your XAMPP `htdocs` directory, e.g.
-   `C:\xampp\htdocs\opportunex` (avoid spaces in the folder name).
+   `C:\xampp\htdocs\grovix` (avoid spaces in the folder name).
 
 2. **Start Apache and MySQL** from the XAMPP Control Panel.
 
@@ -77,17 +77,17 @@ stp project/
    - Update `DB_USER` / `DB_PASS` if your MySQL isn't the default XAMPP
      `root` with no password.
    - Set `BASE_URL` to match the folder name you used in `htdocs`, e.g.
-     `http://localhost/opportunex`.
+     `http://localhost/grovix`.
 
 5. **Create the admin login**
-   Visit `http://localhost/opportunex/sql/seed_admin.php` once in your
+   Visit `http://localhost/grovix/sql/seed_admin.php` once in your
    browser. It hashes and sets the admin password using your server's own
    PHP install (safer than importing a hard-coded hash from this repo).
    **Delete `sql/seed_admin.php` after running it once.**
 
 6. **Visit the site**
-   - Public site: `http://localhost/opportunex/public/index.php`
-   - Admin panel: `http://localhost/opportunex/admin/login.php`
+   - Public site: `http://localhost/grovix/public/index.php`
+   - Admin panel: `http://localhost/grovix/admin/login.php`
 
 ### Default admin login
 ```

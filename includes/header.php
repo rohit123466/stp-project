@@ -11,7 +11,7 @@ if (!isset($pageTitle)) {
     $pageTitle = SITE_NAME . ' - Digital Marketing Agency';
 }
 if (!isset($metaDescription)) {
-    $metaDescription = 'OpportuneX Digital is a full-service digital marketing agency helping businesses grow online.';
+    $metaDescription = 'Grovix Digital is a full-service digital marketing agency helping businesses grow online.';
 }
 ?>
 <!DOCTYPE html>
@@ -29,7 +29,7 @@ if (!isset($metaDescription)) {
 
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
   <div class="container">
-    <a class="navbar-brand fw-bold" href="<?= BASE_URL ?>/public/index.php">OpportuneX <span class="text-warning">Digital</span></a>
+    <a class="navbar-brand fw-bold" href="<?= BASE_URL ?>/public/index.php">Grovix <span class="text-warning">Digital</span></a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
       <span class="navbar-toggler-icon"></span>
     </button>

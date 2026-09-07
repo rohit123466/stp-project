@@ -12,10 +12,10 @@ define('DB_PASS', '');
 define('DB_NAME', 'opportunex_cms');
 
 // --- Site settings ---------------------------------------------------
-define('SITE_NAME', 'OpportuneX Digital');
+define('SITE_NAME', 'Grovix Digital');
 
 // Base URL of the project as seen in the browser, no trailing slash.
-define('BASE_URL', 'http://localhost/opportunex');
+define('BASE_URL', 'http://localhost/grovix');
 
 // --- Upload settings ---------------------------------------------------
 define('UPLOAD_DIR', __DIR__ . '/../uploads/'); // server filesystem path

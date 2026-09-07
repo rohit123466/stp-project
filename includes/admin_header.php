@@ -15,7 +15,7 @@ $currentPage = basename($_SERVER['PHP_SELF']);
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title><?= htmlspecialchars($pageTitle) ?> - OpportuneX Admin</title>
+<title><?= htmlspecialchars($pageTitle) ?> - Grovix Admin</title>
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 <link href="<?= BASE_URL ?>/assets/css/style.css" rel="stylesheet">
 </head>
@@ -23,7 +23,7 @@ $currentPage = basename($_SERVER['PHP_SELF']);
 
 <div class="d-flex">
   <nav class="admin-sidebar p-3" style="width: 240px;">
-    <h5 class="text-white mb-4">OpportuneX <span class="text-warning">Admin</span></h5>
+    <h5 class="text-white mb-4">Grovix <span class="text-warning">Admin</span></h5>
     <ul class="nav nav-pills flex-column gap-1">
       <li class="nav-item"><a class="nav-link <?= $currentPage === 'dashboard.php' ? 'active' : '' ?>" href="dashboard.php">Dashboard</a></li>
       <li class="nav-item"><a class="nav-link <?= $currentPage === 'manage_services.php' ? 'active' : '' ?>" href="manage_services.php">Services</a></li>

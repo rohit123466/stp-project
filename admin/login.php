@@ -50,7 +50,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Admin Login - OpportuneX Digital</title>
+<title>Admin Login - Grovix Digital</title>
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 <link href="<?= BASE_URL ?>/assets/css/style.css" rel="stylesheet">
 </head>
@@ -59,7 +59,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
   <div class="row justify-content-center">
     <div class="col-md-4">
       <div class="card p-4">
-        <h4 class="fw-bold text-center mb-3">OpportuneX <span class="text-warning">Admin</span></h4>
+        <h4 class="fw-bold text-center mb-3">Grovix <span class="text-warning">Admin</span></h4>
 
         <?php if ($error): ?>
           <div class="alert alert-danger py-2"><?= htmlspecialchars($error) ?></div>

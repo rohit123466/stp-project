@@ -5,7 +5,7 @@
  * own password_hash() so the hash always matches your PHP install.
  *
  * Run this ONCE in your browser after importing schema.sql, e.g.:
- *   http://localhost/opportunex/sql/seed_admin.php
+ *   http://localhost/grovix/sql/seed_admin.php
  *
  * Default login created: username = admin, password = admin123
  *
