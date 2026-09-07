@@ -101,7 +101,7 @@ require_once __DIR__ . '/../includes/admin_header.php';
       <div class="col-md-6">
         <label class="form-label">Image <span class="text-muted small">(JPG/PNG/WEBP, max 2MB)</span></label>
         <input type="file" name="image" class="form-control" accept=".jpg,.jpeg,.png,.webp" data-preview="#previewImg">
-        <img id="previewImg" src="<?= image_url($editRow['image'] ?? null) ?>" class="mt-2 rounded" style="max-height:100px;">
+        <img id="previewImg" src="<?= service_image_url($editRow['image'] ?? null, $editRow['title'] ?? '') ?>" class="mt-2 rounded" style="max-height:100px;">
       </div>
       <div class="col-12">
         <label class="form-label">Description</label>
@@ -133,7 +133,7 @@ require_once __DIR__ . '/../includes/admin_header.php';
       <tbody>
         <?php foreach ($services as $s): ?>
           <tr>
-            <td><img src="<?= image_url($s['image']) ?>" style="width:60px;height:45px;object-fit:cover;" class="rounded"></td>
+            <td><img src="<?= service_image_url($s['image'], $s['title']) ?>" style="width:60px;height:45px;object-fit:cover;" class="rounded"></td>
             <td><?= htmlspecialchars($s['title']) ?></td>
             <td class="small text-muted"><?= htmlspecialchars(mb_strimwidth($s['description'], 0, 60, '...')) ?></td>
             <td class="small text-muted"><?= htmlspecialchars($s['created_at']) ?></td>
