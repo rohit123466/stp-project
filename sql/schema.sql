@@ -59,10 +59,6 @@ CREATE TABLE portfolio (
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 
-INSERT INTO portfolio (title, description, image, client_name, project_url) VALUES
-('Moviefy - AI-Powered Movie Discovery', 'A movie discovery and streaming-guide platform built to help users find what to watch. Browse trending and top-rated titles, search with advanced filters, explore films by director, and describe a mood to get AI-suggested picks. Moviefy sources listings from third-party platforms rather than hosting media itself.', NULL, 'Personal Project', 'https://moviefy-dusky.vercel.app/'),
-('IPL Auction Game', 'An interactive cricket player-auction web app inspired by the IPL Super Auction, where users can experience the bidding and team-building side of a franchise cricket auction in the browser.', NULL, 'Personal Project', 'https://iplauctiongame.vercel.app/');
-
 -- ------------------------------------------------------------
 -- Table: testimonials
 -- ------------------------------------------------------------
